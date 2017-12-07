@@ -15,7 +15,7 @@ class YamlLoader extends FileLoader
      */
     public function load($resource, $type = null)
     {
-        return Yaml::parse($resource);
+        return Yaml::parse(file_get_contents($resource));
     }
 
     /**
